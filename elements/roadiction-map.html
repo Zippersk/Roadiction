@@ -1,0 +1,20 @@
+<dom-module id="roadiction-map">
+
+	<template>
+
+		<google-map id="exploreMap" latitude="37.779" longitude="-122.3892" min-zoom="9" max-zoom="11" 
+            language="en">
+		  <google-map-marker latitude="37.779" longitude="-122.3892"
+		                     title="Go Giants!" draggable="true">
+		    <img src="http://roadiction.com/p/aaa_1.jpg" />
+		  </google-map-marker>
+		</google-map>
+	</template>
+	<script>
+		Polymer({
+			is: 'roadiction-map',
+
+
+		});
+	</script>
+</dom-module>

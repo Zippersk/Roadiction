@@ -1,0 +1,77 @@
+<dom-module id="roadiction-user">
+	<style>
+		.avatar{
+		    background-color: #fbfbfb;
+		    border-radius: 50%;
+		    border: 1px solid #cccfd0;
+		    box-sizing: border-box;	    
+		    height: 152px;
+		    width: 152px;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.contentUser{
+			max-width: 1028px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.imageUser{
+			width:300px;
+			height: 300px;
+			background-color: lightgray;
+			margin:20px;
+		}
+
+		.userInfo > span{
+			margin: 20px;
+		}
+		.userInfo {
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+		.userName{
+			text-align: center;
+			vertical-align: middle;
+		}
+		.userNameAvatar{
+			margin-top: 50px;
+		}
+		
+	</style>
+	<template>
+
+		<div class="userNameAvatar">
+			<h2 class="userName">
+				<img class="avatar" src="../images/profile.jpg" height="152" width="152"/>
+				Zippersk
+			</h2>
+		</div>	<roadiction-add-animated id="dropdown" on-click="_onDropdownClick">Hello world!</roadiction-add-animated>
+
+		<div class="userInfo"><span>Posts (<b>4</b>)</span><span>Followers (<b>8</b>)</span><span>Following (<b>23</b>)</span></div class="userInfo">
+		<div class="contentUser">
+			<iron-image class="imageUser" sizing="cover" preload fade src="http://roadiction.com/p/aaa_1.jpg"></iron-image>
+		    <iron-image class="imageUser" sizing="cover" preload fade src="http://roadiction.com/p/ddd.jpg"></iron-image>
+			<iron-image class="imageUser" sizing="cover" preload fade src="http://roadiction.com/p/aaa_1.jpg"></iron-image>
+			<iron-image class="imageUser" sizing="cover" preload fade src="http://roadiction.com/p/ddd.jpg"></iron-image>
+		</div>
+		 <button id="dropdown" on-click="_onButtonClick"></button>
+	
+	</template>
+	<script>
+		Polymer({
+			is: 'roadiction-user',
+			attached: function() {
+	        this.async(function() {
+	          document.querySelector('#pages').addEventListener('neon-animation-finish', function() {
+	              var dropdown = this.querySelector('#dropdown');
+		         if (dropdown) {
+		          dropdown.show();
+		         }
+	          });
+	        });
+	      },
+		});
+	</script>
+</dom-module>

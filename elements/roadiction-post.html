@@ -1,0 +1,104 @@
+<dom-module id="roadiction-post">
+	
+	<style>
+	 paper-card {
+      width: 100%;	
+      margin-top: 16px;
+
+
+    }
+    .avatar {
+      display: inline-block;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      color: white;
+      background-color: #fbfbfb;
+      border: 1px solid #cccfd0;
+
+
+    }
+    .fancy .title {
+      position: absolute;
+      top: 38px;
+      color: #00bcd4;
+      width: 100%;
+    }
+    .userName{
+      margin-left: 100px;
+    }
+    .commentLike{
+      margin-right: 0px;
+    }
+
+    .fancy .medium {
+      font-size: 16px;
+      padding-bottom: 8px;
+    }
+    .imageHolder {
+ 	  position: relative;
+      display: inline-block;
+      background-color: #fff;
+    }
+    .image {
+    	width: 100%;
+    	height: auto;
+    }
+    paper-ripple {
+	  color: #fff;
+	}
+	.post-content{
+		position: relative;
+    padding:15px;
+	}
+	.postIcons {
+		float:right;
+		margin-right: 20px;
+	} 
+	.postIcons iron-icon{
+		padding:5px;
+	}
+
+	
+	</style>
+	
+	<template>
+
+      <paper-card class='fancy'>
+
+      <div class="imageHolder">
+	      <img class="image" src="{{photo}}"/>
+      </div>
+
+      <div class="post-content">
+        <img class="avatar" src="{{user}}"/>
+        <div class="title">
+          <div class="userName">
+          	<b>Zippersk</b><span class="postIcons">      	
+          	<iron-icon icon="icons:favorite-border"></iron-icon>37
+         	<iron-icon icon="communication:comment"></iron-icon>0
+         	</span>
+         </div>
+    
+        
+
+       
+        </div>
+
+      </div>
+
+     </paper-card>
+
+
+	</template>
+	<script>
+		Polymer({
+			is: 'roadiction-post',
+			properties: {
+		    user: String,
+		    photo: String,
+		  },
+
+		});
+	</script>
+</dom-module>

@@ -1,0 +1,67 @@
+<dom-module id="roadiction-notification-panel">
+<!--	<link rel="import" type="css" href="roadiction-notification-panel.css"> -->
+	<style>
+	  #drawerToolbar {
+	    color: var(--secondary-text-color);
+	    background-color: var(--drawer-menu-color);
+	    border-bottom: var(--drawer-toolbar-border-color);
+	  }
+	  .profileImage{
+  	    display: inline-block;
+	    height: 42px;
+	    width: 42px;
+	    border-radius: 50%;
+	    color: white;
+	    margin: 5px;
+	  }
+	  .imgThumb{
+  	    display: inline-block;
+		max-height: 64px;
+	    max-width: 64px;
+	    color: white;
+	    margin: 5px;
+	  }
+	  paper-card {
+	  	margin:5px;
+	  	width: 100%;
+	  }
+	  .notifyObal{
+	  	    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	  }
+	</style>
+	<template> 
+		<paper-toolbar id="drawerToolbar">
+
+		   <span class="paper-font-title">Notification</span>
+		   <span class="flex"></span>
+		   <img class="profileImage" src="../images/profile.jpg"/>
+
+		</paper-toolbar>
+
+			<paper-material elevation="0" class="center horizontal layout notifyObal">
+		 	  <img class="profileImage" src="../images/profileMarcel.jpg"/>
+		        <span class="flex">Marcel liked your photo</span>
+		      <img class="imgThumb" src="http://roadiction.com/p/ddd.jpg"/>
+			</paper-material>
+
+
+			<paper-material elevation="0" class="center horizontal layout notifyObal">
+		 	  <img class="profileImage" src="../images/profileMarcel.jpg"/>
+		        <span class="flex">Marcel now folowing you</span>
+			</paper-material>
+
+
+			<paper-material elevation="0" class="center horizontal layout notifyObal">
+		 	  <img class="profileImage" src="../images/profileBetka.jpg"/>
+		        <span class="flex">Betka liked your picture</span>
+		      <img class="imgThumb" src="http://roadiction.com/p/aaa_1.jpg"/>
+			</paper-material>
+
+	</template>
+	<script>
+		Polymer({
+			is: 'roadiction-notification-panel',
+
+		});
+	</script>
+</dom-module>
